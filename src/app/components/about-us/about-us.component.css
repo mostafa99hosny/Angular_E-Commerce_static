@@ -1,0 +1,13 @@
+h2, h3 {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .list-group-item {
+    transition: background-color 0.3s;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f8f9fa;
+  }
+  

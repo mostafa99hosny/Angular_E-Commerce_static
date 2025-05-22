@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand p-2" [routerLink]="['/home']">
+      <img
+        src="Mylogo.png"
+        alt="Logo"
+        width="150"
+        height="80"
+        class="d-inline-block align-text-top"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-evenly"
+      id="navbarNavDropdown"
+    >
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item">
+          <a
+            class="nav-link active text-white fs-5"
+            aria-current="page"
+            [routerLink]="['/home']"
+            [routerLinkActive]="'border-bottom border-success border-3'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-white fs-5"
+            [routerLink]="['/products']"
+            [routerLinkActive]="'border-bottom border-success border-3'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Products</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-white fs-5"
+            [routerLink]="['/products/0/edit']"
+            [routerLinkActive]="'border-bottom border-success border-3'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Add Product</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-white fs-5"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Account
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark fs-5">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/account/login']"
+                [routerLinkActive]="'border-bottom border-success border-3'"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/account/register']"
+                [routerLinkActive]="'border-bottom border-success border-3'"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
