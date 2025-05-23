@@ -1,14 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { ProductsComponent } from '../../pages/products/products.component';
-
+import { Component, OnInit } from '@angular/core';
+import { StaticProductService } from '../../services/static-product.service';
+import { Iproduct } from '../../models/iproduct';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-table',
-  imports: [CommonModule,ProductsComponent],
+  imports: [CommonModule,RouterLink],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
-export class TableComponent {
-products: any;
+export class TableComponent implements OnInit {
+  products!:Iproduct[];
+
+  constructor(private productsService:StaticProductService){}
+
+  ngOnInit(): void {
+    this.products=this.productsService.getAllProducts();
+  }
 
 }
