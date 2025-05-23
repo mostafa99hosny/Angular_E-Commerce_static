@@ -51,8 +51,8 @@ export class StaticProductService {
   editProduct(id:string,product:Iproduct){
     
   }
-  deleteProduct(id:string){
-    
-
+  deleteProduct(productId:string){
+    this.productList= this.productList.filter((product)=>product.id!= productId);
+    return this.productList;
   }
 }

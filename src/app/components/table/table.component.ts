@@ -17,5 +17,9 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {
     this.products=this.productsService.getAllProducts();
   }
+  deleteHandler(productId:string){
+    this.products=this.productsService.deleteProduct(productId);
+    
+  }
 
 }
