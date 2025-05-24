@@ -46,9 +46,11 @@ export class StaticProductService {
     return this.productList.find(prod=>prod.id==id)!;
   }
   addNewProduct(product:Iproduct){
-    return this.productList.push(product);
+    this.productList.push(product);
   }
   editProduct(id:string,product:Iproduct){
+    let index = this.productList.findIndex((product)=>product.id==id);
+    this.productList[index]=product;
     
   }
   deleteProduct(productId:string){
